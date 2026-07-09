@@ -129,6 +129,13 @@ This project demonstrates the development of an internal business platform using
 * Event-driven features
 * Enterprise application organization
 
-## License
+## Project Highlights
 
-MIT License
+- Laravel monolithic application architecture
+- Role-based access control
+- Business workflow management
+- Database-driven application design
+- Background processing with Jobs
+- Event-based internal notifications
+- File management workflows
+- Modular organization using Controllers, Models and Services
