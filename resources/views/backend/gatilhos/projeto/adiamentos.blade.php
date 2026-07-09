@@ -17,7 +17,7 @@
                     <div class="d-flex w-100 justify-content-between">
                         <div>
                             <div class="d-flex w-100 align-items-center" style="display: block !important;">
-                                <img src="http://intranet.logicadigital.com.br/{{ $registro->image }}" alt="Image placeholder" class="avatar avatar-xs mr-2" style="width:30px;height:30px;float: left;">
+                                <img src="{{ $registro->image ? config('app.url').'/'.ltrim($registro->image, '/') : asset('img/user.svg') }}" alt="Image placeholder" class="avatar avatar-xs mr-2" style="width:30px;height:30px;float: left;">
                                 <h5 class="mb-1" style="width: 70%;float: left;">{{ $registro->name }} {{ $registro->sobrenome }}</h5>
                                 <small style="float: left;width: 70%;font-size: 9px;font-weight: 400;color: #444;margin-top: -5px;">Postado em: {{ date( 'd/m/Y' , strtotime($registro->postado_em)) }}</small>
                             </div>

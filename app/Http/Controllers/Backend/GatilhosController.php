@@ -946,14 +946,14 @@ class GatilhosController extends Controller{
         if(count($arrProjetosAvisos) > 0){
             $email = new GatilhosAvisos($arrProjetosAvisos);
             $email->subject('[LD] ⚠️ AVISO GATILHO ' . Carbon::today()->format('d/m/Y'));
-            Mail::to('staff@logicadigital.info')
+            Mail::to(env('MAIL_TO_ADDRESS','no-reply@example.com'))
                     ->send($email);
         }
 
         if(count($arrProjetosAtrasados) > 0){
             $email = new GatilhosAtrasados($arrProjetosAtrasados);
             $email->subject('[LD] 🚨 GATILHO ATRASADO ' . Carbon::today()->format('d/m/Y'));
-            Mail::to('staff@logicadigital.info')
+            Mail::to(env('MAIL_TO_ADDRESS','no-reply@example.com'))
                             ->send($email);
         }
         dd('foi');
@@ -968,8 +968,8 @@ class GatilhosController extends Controller{
         $hoje_formatado     = (new Carbon())->format('d/m/Y');
         //dd($email);
         $email->subject('[LD] Relatório de Projetos - ' . $hoje_formatado);
-        //Mail::to('marcelo@logicadigital.com.br')->send($email);
-        Mail::to('atendimento@logicadigital.info')->cc('comercial@logicadigital.info')->send($email);
+        //Mail::to('usuario@example.com')->send($email);
+        Mail::to(env('MAIL_TO_ADDRESS','no-reply@example.com'))->cc(env('MAIL_CC_ADDRESS', null))->send($email);
 
     }
 
@@ -981,8 +981,8 @@ class GatilhosController extends Controller{
         $hoje_formatado     = (new Carbon())->format('d/m/Y');
         //dd($email);
         $email->subject('[LD] Verificar Andamento - Projetos Pausados - ' . $hoje_formatado);
-        //Mail::to('marcelo@logicadigital.com.br')->send($email);
-        Mail::to('atendimento@logicadigital.info')->cc('comercial@logicadigital.info')->send($email);
+        //Mail::to(env('MAIL_ADMIN_ADDRESS','usuario@example.com'))->send($email);
+        Mail::to(env('MAIL_TO_ADDRESS','no-reply@example.com'))->cc(env('MAIL_CC_ADDRESS', null))->send($email);
 
     }
 

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Lógica Digital - Intranet</title>
+    <title>{{ config('app.name', 'Intranet') }}</title>
 
     <!-- Scripts
     <script src="{{ asset('js/app.js') }}" defer></script>-->
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/icone-logica-19x19.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('img/logo.png') }}" rel="icon" type="image/png">
 
     <!-- Icons -->
     <link href="{{ asset('dashboard/nucleo/css/nucleo.css') }}" rel="stylesheet">

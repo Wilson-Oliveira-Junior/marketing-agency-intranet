@@ -89,7 +89,7 @@
     </head>
     <body>
         <div class="col-md-12 style-email">
-            <img src="https://www.logicadigital.com.br/arquivos/2018/08/logo-preto.png" class="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="logo">
             <h2>Devedores!</h2>
             <div class="bloco-texto">
                 <p>Olá Pessoal,</p>
@@ -98,7 +98,7 @@
                 <p class="p-diferente"><span>{{$registro->nome_fantasia}}</span> - {{$registro->status_financeiro_escrito}}</p>
                 @endforeach
             </div>
-            <p class="desenvolvido">Desenvolvido por <a href="https://logicadigital.com.br"><img src="https://www.logicadigital.com.br/arquivos/2022/02/cropped-fav-32x32.png" width="19" height="19">Lógica Digital</a></p>
+            <p class="desenvolvido">Desenvolvido por <a href="#"><img src="{{ asset('img/logo.svg') }}" width="19" height="19">Empresa</a></p>
         </div>
     </body>
 </html>

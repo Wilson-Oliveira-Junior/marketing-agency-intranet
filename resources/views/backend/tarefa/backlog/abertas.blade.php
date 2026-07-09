@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="imagem">
-                        <img src="http://intranet.logicadigital.com.br/img/homer.png" style="width: 250px;">
+                        <img src="{{ asset('img/homer.png') }}" style="width: 250px;">
                     </div>
                 </div>
             @endforelse

@@ -26,7 +26,7 @@
 
         <div class="criado_por_evento">
             <span>Criado por:</span> 
-            <img src="http://intranet.logicadigital.com.br/{{ $registro->image }}">
+            <img src="{{ $registro->image ? config('app.url').'/'.ltrim($registro->image, '/') : asset('img/user.svg') }}">
             {{ $registro->nome_usuario }} {{ $registro->sobrenome_usuario }}
         </div>
 
@@ -46,7 +46,7 @@
             <h2>Compartilhado com:</h2>
             @foreach($seguidores as $seguidor)
                 <div class="seguidores-info-evento">
-                    <img src="http://intranet.logicadigital.com.br/{{ $seguidor->image }}">
+                    <img src="{{ $seguidor->image ? config('app.url').'/'.ltrim($seguidor->image, '/') : asset('img/user.svg') }}">
                     <h3>{{ $seguidor->name }} {{ $seguidor->sobrenome }}</h3>
                     <a href="#" class="remover-seguidor">X</a>
                 </div>

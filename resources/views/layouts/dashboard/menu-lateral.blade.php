@@ -371,14 +371,14 @@
   <ul class="navbar-nav mb-md-3">
 
     <li class="nav-item">
-      <a class="nav-link" href="https://www.facebook.com/agencialogicadigital/" target="_blank">
+      <a class="nav-link" href="#" target="_blank">
         <i class="fab fa-facebook-square" style="color:#4267b2"></i>
         <span class="ocultar-pequeno">Facebook</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="https://www.instagram.com/agencialogicadigital/" target="_blank">
+      <a class="nav-link" href="#" target="_blank">
         <i class="fab fa-instagram" style="color: #c23884;"></i>
         <span class="ocultar-pequeno">Instagram</span>
       </a>
@@ -399,7 +399,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="https://br.pinterest.com/logicadigital" target="_blank">
+      <a class="nav-link" href="#" target="_blank">
         <i class="fab fa-pinterest" style="color: #e60023;"></i>
         <span class="ocultar-pequeno">Pinterest</span>
       </a>

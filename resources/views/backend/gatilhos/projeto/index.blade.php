@@ -458,7 +458,7 @@
         var id_usuario      = $('#usuario-sistema').text();
         $.ajax({
           type: "GET",
-          url: 'http://intranet.logicadigital.com.br/backend/gatilhos/{{ $registro->id }}/statusAberto/usuario/' + id_usuario,
+          url: '{{ url('/backend/gatilhos') }}/{{ $registro->id }}/statusAberto/usuario/' + id_usuario,
           success: function(){
             $(".checklist-item-{{ $registro->id }}").removeClass("checklist-item-checked");
             $('.checklist-item-{{ $registro->id }} .data-conclusao').fadeOut();

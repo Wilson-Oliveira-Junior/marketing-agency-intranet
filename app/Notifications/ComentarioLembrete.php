@@ -51,7 +51,7 @@ class ComentarioLembrete extends Notification
         $mensagem   = $notifiable->comentario;
 
         return (new MailMessage())
-                ->subject('[Lógica Digital] - Comentário Lembrete #'.$notifiable->id_lembrete.'')
+                ->subject('['.config('app.name', 'Intranet').'] - Comentário Lembrete #'.$notifiable->id_lembrete.'')
                 ->view('backend.emails.novocomentario', compact('url', 'aberta', 'mensagem', 'lembrete'));
     }
 

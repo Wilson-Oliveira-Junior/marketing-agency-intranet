@@ -94,7 +94,7 @@
     </head>
     <body>
         <div class="col-md-12 style-email">
-            <img src="https://www.logicadigital.com.br/arquivos/2018/08/logo-preto.png" class="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="logo">
             <h2>Solicita&ccedil;&atilde;o de Altera&ccedil;&atilde;o de Senha REPROVADA!</h2>
             <div class="bloco-texto">
                     <p>Olá {{$arrDados['solicitadopor']}} {{$arrDados['solicitadopor_sobrenome']}},</p>
@@ -106,7 +106,7 @@
                     <p style="text-align: center;margin-top: 30px;"><strong><a href="{{ route('backend.cliente.registro-senha.listagem') }}" class="link-mail">Listagem de Senhas</strong></a>
                            
             </div>
-            <p class="desenvolvido">Desenvolvido por <a href="https://logicadigital.com.br"><img src="https://www.logicadigital.com.br/arquivos/2018/08/icone-logica.png">Lógica Digital</a></p>
+            <p class="desenvolvido">Desenvolvido por <a href="#"><img src="{{ asset('img/logo.svg') }}">Empresa</a></p>
         </div>
     </body>
 </html>

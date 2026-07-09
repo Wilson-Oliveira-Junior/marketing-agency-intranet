@@ -6,8 +6,8 @@
 
             <div class="sidenav-header d-flex align-items-center" style="min-height: 40px;">
 
-                <img src="{{ asset('img/logo.png') }}" class="navbar-brand-img logo-logica" alt="Intranet Lógica Digital">
-                <img src="{{ asset('img/icone-logica-19x19.png') }}" class="icone-logica">
+                <img src="{{ asset('img/logo.png') }}" class="navbar-brand-img" alt="Empresa">
+                <img src="{{ asset('img/logo.png') }}" class="icone-empresa" alt="Empresa">
 
             </div>
 

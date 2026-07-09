@@ -44,7 +44,7 @@
                     urlAtual = "{{ URL::current() }}";
 
                     if(urlAnterior == urlAtual){
-                        window.location.href = "http://intranet.logicadigital.com.br/backend/tarefas";
+                        window.location.href = "{{ url('/backend/tarefas') }}";
                     }else{
                         window.location.href = "{{ URL::previous() }}";
                     }

@@ -242,7 +242,7 @@
                 @if($registro->id_user == Auth::user()->id)
                     <div class="caixa-comentario">
                         <div class="foto">
-                            <img src="http://intranet.logicadigital.com.br/{{ $registro->image }}">
+                            <img src="{{ $registro->image ? config('app.url').'/'.ltrim($registro->image, '/') : asset('img/user.svg') }}">
                         </div>
 
                         <div class="complemento">
@@ -265,7 +265,7 @@
                 @else
                     <div class="caixa-comentario">
                         <div class="foto" style="float: right;margin-left: 0px;margin-right: 25px;">
-                            <img src="http://intranet.logicadigital.com.br/{{ $registro->image }}">
+                            <img src="{{ $registro->image ? config('app.url').'/'.ltrim($registro->image, '/') : asset('img/user.svg') }}">
                         </div>
 
                         <div class="complemento" style="float: right;margin-right: 10px;background-color: #e1efee;border-radius: 15px 0px 15px 15px;">

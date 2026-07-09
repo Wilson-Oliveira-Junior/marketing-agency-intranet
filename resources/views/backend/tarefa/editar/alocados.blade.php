@@ -9,7 +9,7 @@
                 @if($registro->imagem_responsavel == NULL)
                     <img src="{{ asset('img/user.png') }}">
                 @else
-                    <img src="http://intranet.logicadigital.com.br/{{ $registro->imagem_responsavel }}">
+                    <img src="{{ $registro->imagem_responsavel ? config('app.url').'/'.ltrim($registro->imagem_responsavel, '/') : asset('img/user.svg') }}">
                 @endif
                 <h3 id="id-nome-h3" style="width: 50%;">{{ $registro->nome_responsavel }}</h3>
                 <h5 id="id-nome-h5">{{ $registro->nome_setor }}</h5>
@@ -39,7 +39,7 @@
             @if($registro->imagem_responsavel == NULL)
                 <img src="{{ asset('img/user.png') }}">
             @else
-                <img src="http://intranet.logicadigital.com.br/{{ $registro->imagem_responsavel }}">
+                <img src="{{ $registro->imagem_responsavel ? config('app.url').'/'.ltrim($registro->imagem_responsavel, '/') : asset('img/user.svg') }}">
             @endif
             <h3 id="id-nome-h3" style="width: 50%;">{{ $registro->nome_responsavel }}</h3>
             <h5 id="id-nome-h5">{{ $registro->nome_setor }}</h5>

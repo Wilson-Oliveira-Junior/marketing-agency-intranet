@@ -53,7 +53,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
             </div>
-            <input class="form-control" name="usuario" placeholder="Exemplo: prod_logica" type="text" value="{{ isset($vFTP->usuario) ? $vFTP->usuario : '' }}">
+            <input class="form-control" name="usuario" placeholder="Exemplo: prod_empresa" type="text" value="{{ isset($vFTP->usuario) ? $vFTP->usuario : '' }}">
         </div>
     </div>
 </div>

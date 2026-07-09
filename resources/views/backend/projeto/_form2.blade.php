@@ -65,7 +65,7 @@
 
 @section('script')
     <script>
-        var url = "http://intranet.logicadigital.com.br/backend/clientes/"+ {{ $idCliente }} +"/dominios/";
+        var url = "{{ url('/backend/clientes') }}/" + {{ $idCliente }} + "/dominios/";
         $("#dominiosCliente").find(".dominioos").remove();
         var j = 0;
         $.ajax({

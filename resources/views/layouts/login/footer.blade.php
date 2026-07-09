@@ -10,13 +10,13 @@
         <div class="col-xl-6">
           <ul class="nav nav-footer justify-content-center justify-content-xl-end">
             <li class="nav-item">
-              <a href="https://www.logicadigital.com.br/" class="nav-link text-white" target="_blank">Lógica Digital</a>
+              <a href="#" class="nav-link text-white" target="_blank">Empresa</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.logicadigital.com.br/sobre-a-agencia/" class="nav-link text-white" target="_blank">Sobre Nós</a>
+              <a href="#" class="nav-link text-white" target="_blank">Sobre Nós</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.logicadigital.com.br/blog/" class="nav-link text-white" target="_blank">Blog</a>
+              <a href="#" class="nav-link text-white" target="_blank">Blog</a>
             </li>
           </ul>
         </div>

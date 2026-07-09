@@ -232,17 +232,17 @@
 
         <div class="detailed-desc">
             <p>
-                Seja {{ strtolower($bemvindo) }} a Lógica Digital!<br>Sabemos que o primeiro dia é tenso, então vamos te ajudar.
+				Seja {{ strtolower($bemvindo) }} à {{ config('app.name', 'Intranet') }}!<br>Sabemos que o primeiro dia é tenso, então vamos te ajudar.
             </p>
             <div class="columns">
                 <div class="block-info azul">
                     Para o seu dia a dia:
                     <ul>
                         <li>
-                            <div class="circle"></div> <a href="http://wiki.logicadigital.com.br/" target="_blank">WIKI</a>
+							<div class="circle"></div> <a href="#" target="_blank">WIKI</a>
                         </li>
                         <li>
-                            <div class="circle"></div> <a href="http://intranet.logicadigital.com.br/" target="_blank">INTRANET</a>
+							<div class="circle"></div> <a href="#" target="_blank">INTRANET</a>
                         </li>
                     </ul>
                 </div>
@@ -311,7 +311,7 @@
                 Estamos muito felizes em ter você aqui conosco, e esperamos unir forças para crescer juntos.
             </div>
 
-            <img class="logo" src="{{ asset('img/email-boas-vindas/logo_logica.png')}}" alt="Lógica Digital">
+			<img class="logo" src="{{ asset('img/logo.svg')}}" alt="{{ config('app.name', 'Intranet') }}">
         </div>
     </div>
 </body>

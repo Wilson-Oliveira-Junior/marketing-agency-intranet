@@ -9,7 +9,7 @@
                         <div class="media align-items-center">
                             <span class="avatar avatar-sm rounded-circle">
                                 @if( Auth::user()->image != NULL )
-                                    <img alt="Image placeholder" src="http://intranet.logicadigital.com.br/{{ Auth::user()->image }}">
+                                    <img alt="Image placeholder" src="{{ Auth::user()->image ? config('app.url').'/'.ltrim(Auth::user()->image, '/') : asset('img/user.svg') }}">
                                 @else
                                     <img alt="Image placeholder" src="{{ asset('img/user.png') }}">
                                 @endif
@@ -23,24 +23,24 @@
                     <h6 class="text-overflow m-0">Bem Vindo!</h6>
                     </div>
                     
-                    <a href="http://intranet.logicadigital.com.br/backend/usuarios/editar/1" class="dropdown-item">
+                    <a href="{{ url('/backend/usuarios/editar/1') }}" class="dropdown-item">
                     <i class="ni ni-single-02"></i>
                     <span>Meu Perfil</span>
                     </a>
 
-                    <a href="http://intranet.logicadigital.com.br/backend/usuario/1/cronograma" class="dropdown-item">
+                    <a href="{{ url('/backend/usuario/1/cronograma') }}" class="dropdown-item">
                     <i class="ni ni-calendar-grid-58"></i>
                     <span>Meu Cronograma</span>
                     </a>
 
-                    <a href="http://intranet.logicadigital.com.br/backend/tarefas/backlog/1" class="dropdown-item">
+                    <a href="{{ url('/backend/tarefas/backlog/1') }}" class="dropdown-item">
                     <i class="fas fa-atom"></i>
                     <span>Backlog do Meu Setor</span>
                     </a>
 
                     <div class="dropdown-divider"></div>
                     
-                    <a href="http://intranet.logicadigital.com.br/backend/login/sair" class="dropdown-item">
+                    <a href="{{ route('logout') }}" class="dropdown-item">
                     <i class="ni ni-user-run"></i>
                     <span>Sair</span>
                     </a>

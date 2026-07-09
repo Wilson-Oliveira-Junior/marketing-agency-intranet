@@ -2,7 +2,7 @@
 
 @section('mensagem-header')
 <h1 class="text-white">Bem-Vindo!</h1>
-<p class="text-lead text-light" style="color: #f5f5f5 !important;">Seja Bem-vindo(a) a Intranet da Lógica Digital, um novo mundo apresentado a você !</p>
+<p class="text-lead text-light" style="color: #f5f5f5 !important;">Seja bem-vindo(a) à {{ config('app.name', 'Intranet') }}, um novo mundo apresentado a você!</p>
 @endsection
 
 @section('content')

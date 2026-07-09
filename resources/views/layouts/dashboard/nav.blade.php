@@ -31,7 +31,7 @@
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
                             @if( Auth::user()->image != NULL )
-                                <img alt="Image placeholder" src="http://intranet.logicadigital.com.br/{{ Auth::user()->image }}">
+                                <img alt="Image placeholder" src="{{ Auth::user()->image ? config('app.url').'/'.ltrim(Auth::user()->image, '/') : asset('img/user.svg') }}">
                             @else
                                 <img alt="Image placeholder" src="{{ asset('img/user.png') }}">
                             @endif

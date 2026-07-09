@@ -1,7 +1,7 @@
 <div class="modal fade modal-nova-tarefa" id="novatarefa" tabindex="-1" role="dialog" aria-labelledby="novatarefaLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document" style="width: 800px;">
         <div id="loader" style="display:none !important">
-            <img src="http://intranet.logicadigital.com.br/img/load-oficial.gif">
+            <img src="{{ asset('img/load-oficial.gif') }}">
         </div>
         <div class="modal-content">
             

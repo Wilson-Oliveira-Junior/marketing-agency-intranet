@@ -40,7 +40,7 @@
             @else
                 <div class="mb-1">
                     <div class="media media-comment">
-                        <img alt="Image placeholder" class="avatar avatar-lg media-comment-avatar rounded-circle" src="http://intranet.logicadigital.com.br/{{ $comentario->image }}">
+                        <img alt="Image placeholder" class="avatar avatar-lg media-comment-avatar rounded-circle" src="{{ $comentario->image ? config('app.url').'/'.ltrim($comentario->image, '/') : asset('img/user.svg') }}">
                         
                         <div class="media-body">
                             <div class="media-comment-text">

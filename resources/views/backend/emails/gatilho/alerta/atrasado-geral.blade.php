@@ -118,7 +118,7 @@
     </head>
     <body>
         <div class="col-md-12 style-email">
-            <img src="https://www.logicadigital.com.br/arquivos/2018/08/logo-preto.png" class="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="logo">
             <h2>Gatilhos Atrasados !</h2>
 
             <div class="bloco-texto">
@@ -151,7 +151,7 @@
                                         <td>{{$atraso['gatilho']}}</td>
                                         <td>{{date('d/m/Y', strtotime($atraso['data_limite']))}}</td>
                                         <td>{{$atraso['envolvidos']}}</td>
-                                        <td><a href="http://intranet.logicadigital.com.br/backend/gatilhos/projeto/{{$projeto['id']}}">🌐</a></td>
+                                        <td><a href="{{ url('/backend/gatilhos/projeto/'.$projeto['id']) }}">🌐</a></td>
                                     </tr>
                                     @endforeach
                                 @endif
@@ -163,7 +163,7 @@
 
 
             </div>
-            <p class="desenvolvido">Desenvolvido por <a href="https://logicadigital.com.br"><img src="https://www.logicadigital.com.br/arquivos/2022/02/cropped-fav-32x32.png" width="19" height="19">Lógica Digital</a></p>
+            <p class="desenvolvido">Desenvolvido por <a href="#"><img src="{{ asset('img/logo.svg') }}" width="19" height="19">Empresa</a></p>
         </div>
     </body>
 </html>

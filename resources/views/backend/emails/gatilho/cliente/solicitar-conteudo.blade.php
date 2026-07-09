@@ -18,7 +18,7 @@
                 padding-bottom: 0px;
                 font-family: 'Muli', sans-serif;
                 border-top: 1px solid #dc4c91;
-                background-image: url(http://intranet.logicadigital.com.br/img/gatilhos/bg-gatilho-email.png);
+                background-image: url({{ asset('img/gatilhos/bg-gatilho-email.png') }});
             }
             .style-email .logo{
                 margin-left: auto;
@@ -149,7 +149,7 @@
                 font-family: 'Muli', sans-serif;
                 text-align: center;
             }
-            .style-email .logo-logica{
+            .style-email .logo-empresa{
                 width: 300px;
                 margin-left: auto;
                 margin-right: auto;
@@ -203,7 +203,7 @@
                     <li style="margin-left: 15px;"><span>DIAS PASSADOS:</span>09/10/2019</li>
                 </ul>
 
-                <img src="http://intranet.logicadigital.com.br/img/gatilhos/logo-logica-digital.png" class="logo-logica">
+                <img src="{{ asset('img/gatilhos/logo.png') }}" class="logo-empresa">
            
                 <div class="nao-responder">Por favor, não responder esse e-mail</div>
             </div>

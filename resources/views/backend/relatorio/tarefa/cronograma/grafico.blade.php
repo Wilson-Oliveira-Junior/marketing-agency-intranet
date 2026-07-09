@@ -74,7 +74,7 @@
 					@if( $users->image == NULL )
 						<img src="{{ asset('img/user.png') }}">
 					@else
-						<img src="http://intranet.logicadigital.com.br/{{ $users->image }}">
+						<img src="{{ $users->image ? config('app.url').'/'.ltrim($users->image, '/') : asset('img/user.svg') }}">
 					@endif
 					<h3 style="text-align: left;width: 30%;">{{ $users->name }} {{ $users->sobrenome }}</h3>
 

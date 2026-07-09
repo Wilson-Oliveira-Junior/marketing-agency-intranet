@@ -2,15 +2,15 @@
 
 @section('style')
     <style>
-        .departamento-logica{
+        .departamento-empresa{
             padding-left: 20px;
             list-style-type: circle;
             line-height: 30px;
         }
-        .departamento-logica a{
+        .departamento-empresa a{
             transition: all .3s linear;
         }
-        .departamento-logica a:hover{
+        .departamento-empresa a:hover{
             padding-left: 10px;
         }
         .lista{
@@ -158,7 +158,7 @@
     <div class="col col-md-4">
         <div class="card shadow">
             <div class="card-header border-0">
-                <h3 class="mb-0" style="width: 200px;float: left;">Wiki Lógica Digital</h3>
+                <h3 class="mb-0" style="width: 200px;float: left;">Wiki</h3>
 
                 <button class="collapse-table-wiki">
                     <i class="ni ni-fat-add" style="float: left;margin-right: 5px;margin-top: 4px;color:#32315e"></i>
@@ -166,36 +166,35 @@
             </div>
 
             <div class="card-body collapse-hidden-wiki" style="background-color: #f7fafc;">
-                <p style="text-align: justify;font-weight: 500;font-size: 14px;">O wiki da lógica
-                digital foi desenvolvido com o intuito de expor as etapas de desenvolvimento de cada
-                área, padrões a serem seguidos em determinados prosseguimentos, etapas e treinamento para quem é novo na
-                lógica, e também temos algumas dúvidas frequentes dos clientes ou da própria equipe.</p>
+                <p style="text-align: justify;font-weight: 500;font-size: 14px;">O wiki foi desenvolvido com o intuito de expor as etapas de desenvolvimento de cada
+                área, padrões a serem seguidos em determinados prosseguimentos, etapas e treinamento para quem é novo no
+                sistema, e também temos algumas dúvidas frequentes dos clientes ou da própria equipe.</p>
 
-                <h3 style="font-size:15px">Wiki - Departamentos da Lógica Digital</h3>
-                <ul class="departamento-logica">
+                <h3 style="font-size:15px">Wiki - Departamentos</h3>
+                <ul class="departamento-empresa">
                     <li>
-                        <a href="http://wiki.logicadigital.com.br/atendimento/" target="_blank">Atendimento</a>
+                        <a href="#" target="_blank">Atendimento</a>
                     </li>
                     <li>
-                        <a href="http://wiki.logicadigital.com.br/comercial/" target="_blank">Comercial</a>
+                        <a href="#" target="_blank">Comercial</a>
                     </li>
                     <li>
-                        <a href="http://wiki.logicadigital.com.br/desenvolvimento/" target="_blank">Desenvolvimento</a>
+                        <a href="#" target="_blank">Desenvolvimento</a>
                     </li>
                     <li>
-                        <a href="http://wiki.logicadigital.com.br/design/" target="_blank">Criação</a>
+                        <a href="#" target="_blank">Criação</a>
                     </li>
                     <li>
-                        <a href="http://wiki.logicadigital.com.br/marketing/" target="_blank">Marketing</a>
+                        <a href="#" target="_blank">Marketing</a>
                     </li>
                     <li>
-                        <a href="http://wiki.logicadigital.com.br/" target="_blank">RH</a>
+                        <a href="#" target="_blank">RH</a>
                     </li>
                 </ul>
             </div>
 
             <div class="card-footer py-4 collapse-hidden-wiki">
-                <a href="http://wiki.logicadigital.com.br" class="btn btn-sm btn-primary" target="_blank">Acessar Wiki</a>
+                <a href="#" class="btn btn-sm btn-primary" target="_blank">Acessar Wiki</a>
             </div>
         </div>
 
@@ -280,7 +279,7 @@
                     </div>
                 @empty
                     <div class="comentario-autor item-comentarios-zero" style="padding-top: 20%;">
-                        <img class="image" src="http://intranet.logicadigital.com.br/img/nenhum-comentario.svg">
+                        <img class="image" src="{{ asset('img/nenhum-comentario.svg') }}">
                         <p class="title-sugestao">Nenhuma sugestão postada.</p>
                         <p class="subtitle-sugestao">Quem será o primeiro a postar? ;).</p>
                     </div>
@@ -322,7 +321,7 @@
                     @foreach($arrAniversario as $registro)
                         <div class="lista">
                             <div class="imagem">
-                                <img src="http://intranet.logicadigital.com.br/{{ $registro->image }}" class="">
+                                <img src="{{ $registro->image ? config('app.url').'/'.ltrim($registro->image, '/') : asset('img/user.svg') }}" class="">
                             </div>
                             <div class="conteudo">
                                 <h3>{{ $registro->name }} {{ $registro->sobrenome }}</h3>
@@ -338,7 +337,7 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdlAniversariantes">
                     Ver Completo
                 </button>
-                <!--<a href="http://wiki.logicadigital.com.br/aniversarios/" class="btn btn-sm btn-primary">Ver Completo</a>-->
+                <!--<a href="" class="btn btn-sm btn-primary">Ver Completo</a>-->
             </div>
 
             <!-- Modal -->
@@ -359,9 +358,9 @@
                             <div class="lista">
                                 <div class="imagem">
                                     @if($pessoa['img'])
-                                        <img src="http://intranet.logicadigital.com.br/{{ $pessoa['img']}}" class="">
+                                        <img src="{{ $pessoa['img'] ? config('app.url').'/'.ltrim($pessoa['img'], '/') : asset('img/user.svg') }}" class="">
                                     @else
-                                    <img src="http://intranet.logicadigital.com.br/img/user.png" class="">
+                                    <img src="{{ asset('img/user.png') }}" class="">
                                     @endif
                                 </div>
                                 <div class="conteudo">

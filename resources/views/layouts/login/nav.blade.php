@@ -2,7 +2,7 @@
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
         <a class="navbar-brand" href="#">
-          <img src="{{ asset('img/logo.png') }}"/>
+          <img src="{{ asset('img/logo.png') }}" alt="Empresa" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
             <div class="row">
               <div class="col-6 collapse-brand">
                 <a href="../index.html">
-                  <img src="../assets/img/brand/blue.png">
+                  <img src="{{ asset('img/logo.png') }}" alt="Empresa" />
                 </a>
               </div>
               <div class="col-6 collapse-close">
@@ -42,7 +42,7 @@
             </li>-->
             <li class="nav-item">
               <a class="nav-link nav-link-icon" href="{{ route('login') }}">
-                <span class="nav-link-inner--text">Intranet Lógica Digital</span>
+                <span class="nav-link-inner--text">{{ config('app.name', 'Intranet') }}</span>
               </a>
             </li>
             <!--<li class="nav-item">

@@ -8,7 +8,7 @@
                         @if($usuario->image == NULL)
                             <img src="{{ asset('img/user.png') }}">
                         @else
-                            <img src="http://intranet.logicadigital.com.br/{{ $usuario->image }}">
+                            <img src="{{ $usuario->image ? config('app.url').'/'.ltrim($usuario->image, '/') : asset('img/user.svg') }}">
                         @endif
                         <h3>{{ $usuario->name }} {{ $usuario->sobrenome }}</h3>
                     </div>

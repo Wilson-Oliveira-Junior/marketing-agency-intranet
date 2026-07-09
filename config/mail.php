@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'intranet.logicadigital@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'LD Intranet'),
+        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@example.com'),
+        'name' => env('MAIL_FROM_NAME', config('app.name', 'Intranet')),
     ],
 
     /*
@@ -84,7 +84,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', 'intranet.logicadigital@gmail.com'),
+    'username' => env('MAIL_USERNAME', null),
 
     'password' => env('MAIL_PASSWORD', 'pnrx czus mlwp fahp'),
 

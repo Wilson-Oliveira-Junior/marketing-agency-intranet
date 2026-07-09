@@ -44,7 +44,7 @@ class EnviaEmailNovoUsuario implements ShouldQueue
         $montaemail->subject('[LD] Seja ' . strtolower($bemvindo) . ' ' . $apelido);
         //dd('Ok');
         $quando = now()->addSeconds(40);
-        Mail::to($email)->bcc('staff@logicadigital.info')->later($quando, $montaemail);
+        Mail::to($email)->later($quando, $montaemail);
 
     }
 }

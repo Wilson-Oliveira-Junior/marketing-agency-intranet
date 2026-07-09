@@ -9,10 +9,10 @@
           <div class="col-xl-6">
             <ul class="nav nav-footer justify-content-center justify-content-xl-end">
               <li class="nav-item">
-                <a href="https://www.logicadigital.com.br/" class="nav-link" target="_blank">Site Lógica Digital</a>
+                <a href="#" class="nav-link" target="_blank">Site</a>
               </li>
               <li class="nav-item">
-                <a href="http://wiki.logicadigital.com.br/" class="nav-link" target="_blank">Wiki Lógica Digital</a>
+                <a href="#" class="nav-link" target="_blank">Wiki</a>
               </li>
             </ul>
           </div>

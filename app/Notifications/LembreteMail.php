@@ -51,7 +51,7 @@ class LembreteMail extends Notification
         $cliente    = Cliente::Where('id', $notifiable->cliente_id)->value('nome');   
 
         return (new MailMessage())
-                ->subject('[Lógica Digital] - Lembrete #'.$notifiable->id.'')
+                ->subject('['.config('app.name', 'Intranet').'] - Lembrete #'.$notifiable->id.'')
                 ->view('backend.emails.novolembrete', compact('url', 'titulo', 'aberta', 'cliente'));
     }
 

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Lógica Digital - Intranet</title>
+    <title>{{ config('app.name', 'Intranet') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,10 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="http://sistema.contatto.com.br:18030/css/backend/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ asset('dashboard/dist/css/AdminLTE.min.css') }}">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/icone-logica.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('img/logo.png') }}" rel="icon" type="image/png">
 
     <!-- Icons -->
     <link href="{{ asset('dashboard/nucleo/css/nucleo.css') }}" rel="stylesheet">

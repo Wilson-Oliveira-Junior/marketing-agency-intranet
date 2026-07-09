@@ -191,7 +191,7 @@ class RegistroDeSenhaController extends Controller
             );
 
             Mail::send('backend.emails.aprovadasolicitacao', ['arrDados' => $data], function ($m) use($solicitadopor) {
-            $m->from('intranet@logicadigital.info', 'LD Intranet');
+            $m->from(env('MAIL_FROM_ADDRESS','no-reply@example.com'), config('app.name', 'Intranet'));
             $m->to($solicitadopor->email, $solicitadopor->name)->subject('[LD] Solicitação de Senha APROVADA - ' . $solicitadopor->nome_fantasia . ' - ' . $solicitadopor->nometipo);
             });
 
@@ -215,7 +215,7 @@ class RegistroDeSenhaController extends Controller
             );
 
             Mail::send('backend.emails.reprovadasolicitacao', ['arrDados' => $data], function ($m) use($solicitadopor) {
-                $m->from('intranet@logicadigital.info', 'LD Intranet');
+                $m->from(env('MAIL_FROM_ADDRESS','no-reply@example.com'), config('app.name', 'Intranet'));
                 $m->to($solicitadopor->email, $solicitadopor->name)->subject('[LD] Solicitação de Senha REPROVADA - ' . $solicitadopor->nome_fantasia . ' - ' . $solicitadopor->nometipo);
                 });
         }else{
@@ -358,7 +358,7 @@ class RegistroDeSenhaController extends Controller
 
         //dd($dadosRegistroSenha[0]->nome_fantasia);
         Mail::send('backend.emails.solitacaoalteracaosenha', ['arrDados' => $data], function ($m) use($emailResponsavel,$dadosRegistroSenha) {
-            $m->from('intranet@logicadigital.info', 'LD Intranet');
+            $m->from(env('MAIL_FROM_ADDRESS','no-reply@example.com'), config('app.name', 'Intranet'));
             $m->to($emailResponsavel[0]->email, 'LD')->subject('[LD] Solicitação de Senha - ' . $dadosRegistroSenha[0]->nome_fantasia . ' - ' . $dadosRegistroSenha[0]->nometipo);
         });
 

@@ -93,7 +93,7 @@
     </head>
     <body>
         <div class="col-md-12 style-email">
-            <img src="https://www.logicadigital.com.br/arquivos/2018/08/logo-preto.png" class="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="logo">
             <h2>Pauta Finalizada!</h2>
             <div class="bloco-texto">
                 <p>Olá {{ $criadopor }},</p>
@@ -106,7 +106,7 @@
                 <p class="p-diferente"><span>Responsável</span><br/> {{ $responsavel }}</p>
                 <p style="text-align: center;margin-top: 30px;"><a href="{{$url}}" class="link-mail">Clique Aqui e veja as pautas.</a>
             </div>
-            <p class="desenvolvido">Desenvolvido por <a href="https://logicadigital.com.br"><img src="https://www.logicadigital.com.br/arquivos/2018/08/icone-logica.png">Lógica Digital</a></p>
+            <p class="desenvolvido">Desenvolvido por <a href="#"><img src="{{ asset('img/logo.svg') }}">Empresa</a></p>
         </div>
     </body>
 </html>

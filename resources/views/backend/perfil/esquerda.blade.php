@@ -4,7 +4,7 @@
             <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                     <a href="#">
-                        <img src="http://intranet.logicadigital.com.br/{{ $usuarios->image }}" class="">
+                        <img src="{{ $usuarios->image ? config('app.url').'/'.ltrim($usuarios->image, '/') : asset('img/user.svg') }}" class="">
                     </a>
                 </div>
             </div>

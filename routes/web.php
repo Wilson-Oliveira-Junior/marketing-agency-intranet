@@ -496,7 +496,7 @@ Route::group(['middleware'=>'auth'],function(){
 			$arrEquipe->all();
 			//dd($arrEquipe);
 
-			return new App\Mail\NovoUsuario('Bem-vindo', 'Marcelinho', $arrEquipe, 'marcelo@logicadigital.com.br', 'mcardoso');
+			return new App\Mail\NovoUsuario('Bem-vindo', 'Usuário', $arrEquipe, env('MAIL_FROM_ADDRESS','no-reply@example.com'), 'usuario');
 		});
 
 		Route::get('/backend/conta-azul/authorize', 'Backend\ContaAzulController@fnAutorizarAplicacao')->name('backend.contaazul.authorize');

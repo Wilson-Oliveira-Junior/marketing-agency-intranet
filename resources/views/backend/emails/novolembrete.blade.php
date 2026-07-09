@@ -93,20 +93,20 @@
     </head>
     <body>
         <div class="col-md-12 style-email">
-            <img src="https://www.logicadigital.com.br/arquivos/2018/08/logo-preto.png" class="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="logo">
             <h2>Um Lembrete foi aberto !</h2>
             <div class="bloco-texto">
                 <p>Olá</p>
                 <p>Foi aberto um novo lembrete para você !</p>
                 <p>Para acessar é muito simples. Clique no botão abaixo e coloca o seu 
-                e-mail da lógica e senha definida é <strong>123mudar</strong>, 
+                e-mail do sistema e senha definida é <strong>123mudar</strong>, 
                 lembrando que a senha pode ser alterada após o acesso.</p>                
                 <p class="p-diferente"><span>Lembrete</span><br/> {{ $titulo }}</p>
                 <p class="p-diferente"><span>Cliente > Projeto</span><br/> {{ $cliente }}</p>
                 <p class="p-diferente"><span>Aberto Por</span><br/> {{ $aberta }}</p>
                 <p style="text-align: center;margin-top: 30px;"><a href="{{ $url }}" class="link-mail">Clique Aqui</a>            
             </div>
-            <p class="desenvolvido">Desenvolvido por <a href="https://logicadigital.com.br"><img src="https://www.logicadigital.com.br/arquivos/2018/08/icone-logica.png">Lógica Digital</a></p>
+            <p class="desenvolvido">Desenvolvido por <a href="#"><img src="{{ asset('img/logo.svg') }}">Empresa</a></p>
         </div>
     </body>
 </html>

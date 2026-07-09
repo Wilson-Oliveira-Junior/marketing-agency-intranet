@@ -2,7 +2,7 @@
     <div class="header bg-gradient-novo pb-8 pt-5 pt-md-8 todos">
 
         <!-- Cabeçalho Mobile -->
-        <div class="caixa-logo-logica" style="background-color: #0a0a43">
+        <div class="caixa-logo" style="background-color: #0a0a43">
           <a href="{{ route('backend.principal') }}">
             <img src="{{ asset('img/logo.png') }}" class="logo-mobile" >
           </a>

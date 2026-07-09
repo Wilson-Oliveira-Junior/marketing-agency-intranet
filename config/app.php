@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://intranet.logicadigital.com.br/'),
+    'url' => env('APP_URL', 'http://intranet.example.com/'),
 
     /*
     |--------------------------------------------------------------------------

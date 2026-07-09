@@ -41,7 +41,7 @@ class UsuarioCriado extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('[Lógica Digital] - Lembrete "Usuário Novo"')
+                    ->subject('['.config('app.name', 'Intranet').'] - Lembrete "Usuário Novo"')
                     ->view('backend.emails.novousuario');
     }
 

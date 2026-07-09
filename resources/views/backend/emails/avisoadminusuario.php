@@ -61,16 +61,16 @@
     </head>
     <body>
         <div class="col-md-12 style-email">
-            <img src="https://www.logicadigital.com.br/arquivos/2018/08/logo-preto.png" class="logo">
+            <img src="{{ asset('img/logo.svg') }}" class="logo">
             <h2>Usuário Adicionado !</h2>
             <div class="bloco-texto">
                 <p>Olá</p>
                 <p>Um novo usuário foi adicionado,<br/>
-                Está tudo pronto para o novo usuário começar a usar o sistemema de lembrete da Lógica, lembrando que você, o administrador tem total controle sobre os usuários que estão cadastrado e a demais funções !</p>
+                Está tudo pronto para o novo usuário começar a usar o sistema de lembrete, lembrando que você, o administrador tem total controle sobre os usuários que estão cadastrado e a demais funções !</p>
                 <p>Clique no botão abaixo e verifique os usuários cadastrados no sistema</p>
                 <p style="text-align: center;margin-top: 30px;"><a href="#" class="link-mail">CLIQUE AQUI</a>
             </div>
-            <p class="desenvolvido">Desenvolvido por <a href="http://logicadigital.com.br"><img src="https://www.logicadigital.com.br/arquivos/2018/08/icone-logica.png">Lógica Digital</a></p>
+            <p class="desenvolvido">Desenvolvido por <a href="#"><img src="<?php echo asset('img/logo.png'); ?>">Empresa</a></p>
         </div>
     </body>
 </html>
